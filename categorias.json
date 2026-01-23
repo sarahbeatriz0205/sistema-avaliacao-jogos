@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "descricao": "Soulslike"
+    },
+    {
+        "id": 2,
+        "descricao": "Esportes"
+    },
+    {
+        "id": 3,
+        "descricao": "FPS"
+    }
+]

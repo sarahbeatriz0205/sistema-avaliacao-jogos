@@ -2,7 +2,7 @@ import json
 from models.classe_dao import DAO
 
 class Jogos:
-    def __init__(self, idJogo, descricao, idCategoria, idJogados):
+    def __init__(self, idJogo, descricao, idCategoria):
         self.set_id(idJogo)
         self.set_descricao(descricao)
         self.set_idCategoria(idCategoria)
