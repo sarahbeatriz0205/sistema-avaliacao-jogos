@@ -12,8 +12,9 @@ class ListarResenhaUI:
         with tab3: ListarResenhaUI.excluir_resenha()
 
     def listar_resenha():
-        resenhas = View.resenha_listar()
-        if len(resenhas) == 0: st.write("Nenhuma resenha salva até o momento")
+        idCliente = st.session_state["cliente_id"]
+        resenhas = View.resenha_listar_cliente(idCliente)
+        if resenhas == None: st.write("Nenhuma resenha salva até o momento")
         else:
             list_dic = []
             for resenha in resenhas: list_dic.append(resenha.to_json())
@@ -45,5 +46,5 @@ class ListarResenhaUI:
                     id = op.get_id()
                     descricao = op.get_resenha()
                     View.resenha_excluir(id, descricao)
-                    st.success("Categoria excluído com sucesso!")
+                    st.success("Resenha excluída com sucesso!")
                     st.rerun()

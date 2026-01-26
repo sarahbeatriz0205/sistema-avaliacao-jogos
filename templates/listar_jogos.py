@@ -26,8 +26,9 @@ class ListarJogosUI:
                     resenha = st.text_area(f"Escreva sua resenha aqui sobre esse jogo aqui", key=jogo.get_descricao())
                     if st.button("Salvar resenha", key=idJogo):
                         try:
-                            id = 0
                             View.resenha_inserir(jogo.get_id(), idCliente, resenha)
                             st.success("Resenha salva com sucesso! Acesse 'Minhas resenhas' para vê-las!")
+                            time.sleep(1)
+                            st.rerun()
                         except Exception as erro:
                             st.error(f"{erro}")

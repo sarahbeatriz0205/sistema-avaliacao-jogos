@@ -1,8 +1,182 @@
 [
     {
         "id": 1,
-        "idCliente": 3,
-        "idJogo": 3,
-        "resenha": "Joga\u00e7o"
+        "nome": "Luiz",
+        "email": "luiz@",
+        "senha": "1234"
+    },
+    {
+        "id": 2,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 3,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 4,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 5,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 6,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 7,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 8,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 9,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 10,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 11,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 12,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 13,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 14,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 15,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 16,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 17,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 18,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 19,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 20,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 21,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 22,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 23,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 24,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 25,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 26,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 27,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 28,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 29,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
+    },
+    {
+        "id": 30,
+        "nome": "Administrador",
+        "email": "admin@",
+        "senha": "admin"
     }
 ]

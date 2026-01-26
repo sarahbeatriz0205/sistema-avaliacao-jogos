@@ -152,6 +152,9 @@ class View:
     
     def resenha_listar_id(id):
         return ResenhaDAO.listar_id(id)
+    
+    def resenha_listar_cliente(idCliente):
+        return ResenhaDAO.listar_resenha_cliente(idCliente)
 
     def resenha_atualizar(id, idCliente, idJogo, resenha):
         c = Resenha(id, idCliente, idJogo, resenha)

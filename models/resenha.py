@@ -45,14 +45,20 @@ class ResenhaDAO(DAO):
             if objeto.get_idCliente() == idCliente:
                 cls.excluir(objeto)
     @classmethod
+    def listar_resenha_cliente(cls, idCliente):
+        cls.abrir()
+        for objeto in cls.objetos:
+            if objeto.get_idCliente == idCliente:
+                return objeto
+    @classmethod
     def salvar(cls):
-        with open("clientes.json", mode="w") as arquivo:
-            json.dump(cls.objetos, arquivo, default = Resenha.to_json, indent=4)
+        with open("resenhas.json", mode="w") as arquivo:
+            json.dump(cls.objetos, arquivo, default =Resenha.to_json, indent=4)
     @classmethod
     def abrir(cls):
         cls.objetos = []
         try:
-            with open("clientes.json", mode="r") as arquivo:
+            with open("resenhas.json", mode="r") as arquivo:
                 list_dic = json.load(arquivo)
                 for dic in list_dic:
                     c = Resenha.from_json(dic)
