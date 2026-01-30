@@ -14,11 +14,10 @@ class ListarResenhaUI:
     def listar_resenha():
         idCliente = st.session_state["cliente_id"]
         resenhas = View.resenha_listar_cliente(idCliente)
-        if resenhas == None: st.write("Nenhuma resenha salva até o momento")
+        if resenhas == None: 
+            st.write("Nenhuma resenha salva até o momento")
         else:
-            list_dic = []
-            for resenha in resenhas: list_dic.append(resenha.to_json())
-            df = pd.DataFrame(list_dic)
+            df = pd.DataFrame(resenhas)
             st.dataframe(df, hide_index=True, column_order=["id", "idCliente", "idJogo", "resenha"])
     
     def atualizar_resenha():
@@ -29,9 +28,8 @@ class ListarResenhaUI:
             r = st.text_input("Nova resenha",  op.get_resenha())
             if st.button("Atualizar"):
                 try:
-                    id = op.get_id()
-                    View.resenha_atualizar(id, r)
-                    st.success("Categoria atualizada com sucesso!")
+                    View.resenha_atualizar(op.get_id(), op.get_idCliente(), op.get_idJogo(), r)
+                    st.success("Possível resenha atualizada e averiguada com sucesso!")
                     time.sleep(1)
                     st.rerun()
                 except Exception as erro:
@@ -43,8 +41,6 @@ class ListarResenhaUI:
             op = st.selectbox("Excluir resenhas", resenhas)
             if op:
                 if st.button("Excluir"):
-                    id = op.get_id()
-                    descricao = op.get_resenha()
-                    View.resenha_excluir(id, descricao)
+                    View.resenha_excluir(op.get_id(), op.get_idCliente(), op.get_idJogo(), op.get_resenha())
                     st.success("Resenha excluída com sucesso!")
                     st.rerun()

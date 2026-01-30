@@ -28,13 +28,13 @@ class Resenha:
         return self.__resenha
     
     def __str__(self):
-        return f"{self.__id} - {self.__idCliente} - {self.__idJogo} - {self.__resenha}"
+        return f"Id da resenha: {self.__id} - Seu id (cliente): {self.__idCliente} - Id do jogo avaliado: {self.__idJogo} - Sua resenha: {self.__resenha}"
     
     def to_json(self):
         return {"id" : self.__id, "idCliente": self.__idCliente,"idJogo" : self.__idJogo ,"resenha" : self.__resenha}
     @staticmethod
     def from_json(dic):
-        return Resenha(dic["id"], dic["idCliente"], dic["resenha"]) 
+        return Resenha(dic["id"], dic["idCliente"], dic["idJogo"], dic["resenha"]) 
 
 class ResenhaDAO(DAO):
     objetos = []
@@ -47,9 +47,11 @@ class ResenhaDAO(DAO):
     @classmethod
     def listar_resenha_cliente(cls, idCliente):
         cls.abrir()
+        resenhas = []
         for objeto in cls.objetos:
-            if objeto.get_idCliente == idCliente:
-                return objeto
+            if objeto.get_idCliente() == idCliente:
+                resenhas.append(objeto)
+        return resenhas 
     @classmethod
     def salvar(cls):
         with open("resenhas.json", mode="w") as arquivo:

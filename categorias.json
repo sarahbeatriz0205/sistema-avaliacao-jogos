@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "descricao": "Soulslike"
+        "descricao": "FPS"
     },
     {
         "id": 2,
@@ -9,6 +9,10 @@
     },
     {
         "id": 3,
-        "descricao": "FPS"
+        "descricao": "Terror"
+    },
+    {
+        "id": 4,
+        "descricao": "Corrida"
     }
 ]

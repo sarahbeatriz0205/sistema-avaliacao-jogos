@@ -1,18 +1,6 @@
 [
     {
-        "idJogo": 5,
+        "idJogo": 3,
         "idCliente": 2
-    },
-    {
-        "idJogo": 4,
-        "idCliente": 2
-    },
-    {
-        "idJogo": 5,
-        "idCliente": 3
-    },
-    {
-        "idJogo": 10,
-        "idCliente": 3
     }
 ]

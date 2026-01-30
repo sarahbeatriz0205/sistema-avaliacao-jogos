@@ -10,10 +10,8 @@ class View:
         id = None
         nome = "Administrador"
         for obj in ClienteDAO.listar():
-            if obj.get_email() == "admin@" and obj.get_senha() == "admin": 
-                return
-            else:
-                ClienteDAO.inserir(Cliente(id, nome, email, senha)) 
+            if obj.get_email() == "admin@" and obj.get_senha() == "admin": return
+        ClienteDAO.inserir(Cliente(id, nome, email, senha)) 
     @staticmethod
     def cliente_autenticar(email, senha):
         for obj in View.cliente_listar():
@@ -154,14 +152,25 @@ class View:
         return ResenhaDAO.listar_id(id)
     
     def resenha_listar_cliente(idCliente):
-        return ResenhaDAO.listar_resenha_cliente(idCliente)
+        res = []
+        resenhas = ResenhaDAO.listar_resenha_cliente(idCliente)
+        for r in resenhas:
+            opiniao_cliente = ResenhaDAO.listar_id(r.get_id())
+            res.append({
+            "id": opiniao_cliente.get_id(),
+            "idJogo": opiniao_cliente.get_idJogo(),
+            "idCliente" : opiniao_cliente.get_idCliente(),
+            "resenha" : opiniao_cliente.get_resenha()
+        })
+        if len(res) == 0:
+            return None 
+        return res
 
     def resenha_atualizar(id, idCliente, idJogo, resenha):
         c = Resenha(id, idCliente, idJogo, resenha)
-        ClienteDAO.atualizar(c)
+        ResenhaDAO.atualizar(c)
         
     def resenha_excluir(id, idCliente, idJogo, resenha):
         c = Resenha(id, idCliente, idJogo, resenha)
         ResenhaDAO.excluir_lote_idCliente(id)
-        FavoritoDAO.excluir_lote_idCliente(id)
-        ClienteDAO.excluir(c)
+        ResenhaDAO.excluir(c)

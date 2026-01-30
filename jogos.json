@@ -1,50 +1,20 @@
 [
     {
-        "id": 3,
+        "id": 1,
         "descricao": "Battlefield 4",
-        "idCategoria": 3,
+        "idCategoria": 1,
         "imagem": "images/battlefield4.svg"
     },
     {
-        "id": 4,
-        "descricao": "Call Of Duty",
-        "idCategoria": 3,
-        "imagem": "images/codMW.svg"
-    },
-    {
-        "id": 5,
-        "descricao": "Forza Horizon",
-        "idCategoria": 2,
+        "id": 2,
+        "descricao": "Forza Horizon 5",
+        "idCategoria": 4,
         "imagem": "images/forza_horizon5.svg"
     },
     {
-        "id": 6,
-        "descricao": "Assassins Creed: Rogue",
+        "id": 3,
+        "descricao": "COD MW",
         "idCategoria": 1,
-        "imagem": "images/rogue.svg"
-    },
-    {
-        "id": 7,
-        "descricao": "EA FC 25",
-        "idCategoria": 2,
-        "imagem": "images/eafc25.svg"
-    },
-    {
-        "id": 8,
-        "descricao": "Minecraft",
-        "idCategoria": 2,
-        "imagem": "images/minecraft360.svg"
-    },
-    {
-        "id": 9,
-        "descricao": "Alien Rage",
-        "idCategoria": 3,
-        "imagem": "images/image 5.svg"
-    },
-    {
-        "id": 10,
-        "descricao": "Clair Obscur: Expedition 33",
-        "idCategoria": 1,
-        "imagem": "images/image 6.svg"
+        "imagem": "images/codMW.svg"
     }
 ]
