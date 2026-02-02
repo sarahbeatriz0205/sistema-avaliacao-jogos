@@ -27,6 +27,6 @@ Entrando como perfil de usuário cliente
 ## 💻 Tecnologias utilizadas
 Linguagem utilizada: Python 3.12
 
-Para interfaces: Módulo Streamlit (nativo do Python)
+Para interfaces: Módulo Streamlit (biblioteca do Python)
 
 Para desenvolvimento: Github Codespaces
