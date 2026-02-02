@@ -1,4 +1,4 @@
-# 🎮 Gameboxd - Sistema para avaliação de jogos
+# 🎮 Sistema para avaliação de jogos
 
 ## ℹ️ Descrição
 O projeto versionado neste repositório foi feito na disciplina de **Programação Orientada A Objetos (POO)** e consiste em um sistema para que usuários possam **avaliar jogos eletrônicos** escrevendo resenhas sobre eles, além de curtir seus jogos favoritos. Outrossim, existe o privilégio de administrador, e com ele é possível **cadastrar novas categorias**, **cadastrar novos clientes** e **cadastrar jogos**. 
