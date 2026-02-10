@@ -3,6 +3,7 @@ from models.categorias import Categoria, CategoriaDAO
 from models.jogos import Jogos, JogosDAO
 from models.favoritos import Favorito, FavoritoDAO
 from models.resenha import Resenha, ResenhaDAO
+from models.avaliacoes import Avaliacoes, AvaliacoesDAO
 
 class View:
     @staticmethod
@@ -163,7 +164,7 @@ class View:
             "resenha" : opiniao_cliente.get_resenha()
         })
         if len(res) == 0:
-            return None 
+            return []
         return res
 
     def resenha_atualizar(id, idCliente, idJogo, resenha):
@@ -182,3 +183,36 @@ class View:
                 return obj.get_id()
         return None
         
+    def avaliacao_inserir(idCliente, idJogo, avaliacao):
+        id = 0
+        c = Avaliacoes(id, idCliente, idJogo, avaliacao)
+        AvaliacoesDAO.inserir(c)
+    
+    def avaliacao_listar():
+        return AvaliacoesDAO.listar()
+
+    def avaliacao_atualizar(idCliente, idJogo, avaliacao):
+        id = 0
+        c = Avaliacoes(id, idCliente, idJogo, avaliacao)
+        AvaliacoesDAO.atualizar(c)
+        
+    def avaliacao_excluir(idCliente, idJogo, avaliacao):
+        id = 0
+        c = Avaliacoes(id, idCliente, idJogo, avaliacao)
+        AvaliacoesDAO.excluir_lote_idCliente(idCliente)
+        AvaliacoesDAO.excluir(c)
+    
+    def avaliacao_listar_cliente(idCliente):
+        av = []
+        avaliacoes = ResenhaDAO.listar_resenha_cliente(idCliente)
+        for a in avaliacoes:
+            av_cliente = AvaliacoesDAO.listar_id(a.get_id())
+            av.append({
+            "id": av_cliente.get_id(),
+            "idCliente" : av_cliente.get_idCliente(),
+            "idJogo": av_cliente.get_idJogo(),
+            "avaliacao" : av_cliente.get_avaliacao()
+        })
+        if len(av) == 0:
+            return []
+        return av

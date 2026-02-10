@@ -8,6 +8,7 @@ from templates.manter_cliente_adm import ManterClienteUI
 from templates.manter_jogos_adm import ManterJogosUI
 from templates.listar_resenha import ListarResenhaUI
 from templates.listar_favoritos import ManterFavoritoUI
+from templates.listar_avaliacoes import ListarAvaliacaoUI
 
 
 class IndexUI:
@@ -19,10 +20,12 @@ class IndexUI:
         def menu_cliente():
                 op = st.sidebar.selectbox("Menu", ["Catálogo de jogos",
                                         "Meus favoritos",
-                                        "Minhas resenhas"])
+                                        "Acompanhar resenhas",
+                                        "Acompanhar avaliações"])
                 if op == "Catálogo de jogos": ListarJogosUI.main()
-                if op == "Minhas resenhas": ListarResenhaUI.main()
+                if op == "Acompanhar resenhas": ListarResenhaUI.main()
                 if op == "Meus favoritos": ManterFavoritoUI.main()
+                if op == "Acompanhar avaliações": ListarAvaliacaoUI.main()
         def menu_admin():
                 # st.sidebar.selectbox: caixa de seleção
                 op = st.sidebar.selectbox("Menu", ["Cadastro de Categorias", 
